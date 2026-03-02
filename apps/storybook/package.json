@@ -1,0 +1,15 @@
+{
+    "name": "@vue-design-system/storybook",
+    "version": "0.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "storybook dev -p 6006",
+        "build": "storybook build"
+    },
+    "dependencies": {
+        "@vue-design-system/theme-dark": "*",
+        "@vue-design-system/theme-default": "*",
+        "@vue-design-system/ui": "*",
+        "vue": "^3.5.0"
+    }
+}

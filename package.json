@@ -10,10 +10,16 @@
     ],
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build:ui": "npm run build --workspace=@vue-design-system/ui"
+        "build:ui": "npm run build --workspace=@vue-design-system/ui",
+        "storybook": "npm run dev --workspace=@vue-design-system/storybook",
+        "build:storybook": "npm run build --workspace=@vue-design-system/storybook",
+        "playground": "npm run dev --workspace=playground"
     },
     "devDependencies": {
+        "@storybook/vue3-vite": "^10.2.13",
+        "@types/node": "^22.0.0",
         "@vitejs/plugin-vue": "^6.0.4",
+        "storybook": "^10.2.13",
         "typescript": "^5.9.3",
         "vite": "^7.3.1",
         "vue": "^3.5.29"

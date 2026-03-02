@@ -5,6 +5,33 @@
     --lucas-ui-color-brand-primary-active: #4f46e5;
     --lucas-ui-color-brand-on-primary: #ffffff;
 
+    /* Danger */
+    --lucas-ui-color-danger: #f87171;
+    --lucas-ui-color-danger-hover: #ef4444;
+    --lucas-ui-color-danger-active: #dc2626;
+    --lucas-ui-color-danger-on: #ffffff;
+
+    /* Success */
+    --lucas-ui-color-success: #4ade80;
+    --lucas-ui-color-success-hover: #22c55e;
+    --lucas-ui-color-success-active: #16a34a;
+    --lucas-ui-color-success-on: #052e16;
+
+    /* Warning */
+    --lucas-ui-color-warning: #fcd34d;
+    --lucas-ui-color-warning-hover: #fbbf24;
+    --lucas-ui-color-warning-active: #f59e0b;
+    --lucas-ui-color-warning-on: #1c1917;
+
+    /* Neutral */
+    --lucas-ui-color-neutral: #9ca3af;
+    --lucas-ui-color-neutral-hover: #6b7280;
+    --lucas-ui-color-neutral-active: #4b5563;
+    --lucas-ui-color-neutral-on: #111827;
+
+    /* Overlay */
+    --lucas-ui-color-overlay-bg: rgba(0, 0, 0, 0.3);
+
     /* Text */
     --lucas-ui-color-text-disabled: #6b7280;
 
@@ -12,9 +39,18 @@
     --lucas-ui-color-border-default: #374151;
 
     /* Spacing */
+    --lucas-ui-space-1: 4px;
     --lucas-ui-space-2: 8px;
     --lucas-ui-space-3: 12px;
     --lucas-ui-space-4: 16px;
+    --lucas-ui-space-5: 20px;
+    --lucas-ui-space-6: 24px;
+
+    /* Font sizes */
+    --lucas-ui-font-size-xs: 0.75rem;
+    --lucas-ui-font-size-sm: 0.875rem;
+    --lucas-ui-font-size-md: 1rem;
+    --lucas-ui-font-size-lg: 1.125rem;
 
     /* Radius */
     --lucas-ui-radius-md: 6px;

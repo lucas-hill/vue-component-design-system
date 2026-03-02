@@ -1,0 +1,25 @@
+:root {
+    /* Brand */
+    --lucas-ui-color-brand-primary: #818cf8;
+    --lucas-ui-color-brand-primary-hover: #6366f1;
+    --lucas-ui-color-brand-primary-active: #4f46e5;
+    --lucas-ui-color-brand-on-primary: #ffffff;
+
+    /* Text */
+    --lucas-ui-color-text-disabled: #6b7280;
+
+    /* Border */
+    --lucas-ui-color-border-default: #374151;
+
+    /* Spacing */
+    --lucas-ui-space-2: 8px;
+    --lucas-ui-space-3: 12px;
+    --lucas-ui-space-4: 16px;
+
+    /* Radius */
+    --lucas-ui-radius-md: 6px;
+
+    /* Motion */
+    --lucas-ui-motion-duration-fast: 150ms;
+    --lucas-ui-motion-easing-standard: ease;
+}

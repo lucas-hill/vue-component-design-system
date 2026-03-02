@@ -1,0 +1,8 @@
+{
+    "name": "@vue-design-system/theme-default",
+    "version": "0.0.1",
+    "private": false,
+    "exports": {
+        "./tokens.css": "./tokens.css"
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "name": "@vue-design-system/ui",
+    "version": "0.0.1",
+    "private": false,
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "style": "./dist/index.css",
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./style": "./dist/index.css"
+    },
+    "scripts": {
+        "build": "vite build && vue-tsc --declaration --emitDeclarationOnly",
+        "dev": "vite",
+        "typecheck": "vue-tsc --noEmit"
+    },
+    "peerDependencies": {
+        "vue": "^3.5.0"
+    },
+    "devDependencies": {
+        "vite": "^7.3.1",
+        "vue-tsc": "^3.2.5"
+    }
+}

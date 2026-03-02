@@ -1,0 +1,21 @@
+{
+    "name": "vue-design-system",
+    "version": "1.0.0",
+    "private": true,
+    "description": "",
+    "workspaces": [
+        "packages/*",
+        "apps/*",
+        "playground"
+    ],
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build:ui": "npm run build --workspace=@vue-design-system/ui"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^6.0.4",
+        "typescript": "^5.9.3",
+        "vite": "^7.3.1",
+        "vue": "^3.5.29"
+    }
+}

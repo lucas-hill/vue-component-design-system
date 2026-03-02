@@ -1,4 +1,5 @@
-:root {
+:root,
+[data-theme="default"] {
     /* Brand */
     --lucas-ui-color-brand-primary: #2563eb;
     --lucas-ui-color-brand-primary-hover: #1d4ed8;

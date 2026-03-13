@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { LoadingOverlay } from '.'
+import type { LoadingOverlayProps } from '.'
 
 const meta: Meta<typeof LoadingOverlay> = {
   title: 'Components/LoadingOverlay',
@@ -8,7 +9,7 @@ const meta: Meta<typeof LoadingOverlay> = {
   argTypes: {
     size: {
       control: 'select',
-      options: ['sm', 'md', 'lg', 'xl'],
+      options: ['xs', 'sm', 'md', 'lg', 'xl'],
     },
     label: { control: 'text' },
   },
@@ -22,7 +23,7 @@ const containerStyle = 'position: relative; display: inline-flex; align-items: c
 
 export const Default: Story = {
   args: { size: 'md' },
-  render: (args) => ({
+  render: (args: LoadingOverlayProps) => ({
     components: { LoadingOverlay },
     setup() { return { args } },
     template: `
@@ -85,7 +86,7 @@ export const OnDifferentColors: Story = {
 
 export const WithLabel: Story = {
   args: { size: 'xl', label: 'Loading card content, please wait' },
-  render: (args) => ({
+  render: (args: LoadingOverlayProps) => ({
     components: { LoadingOverlay },
     setup() { return { args } },
     template: `

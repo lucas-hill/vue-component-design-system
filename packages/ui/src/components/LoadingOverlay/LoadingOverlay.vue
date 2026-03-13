@@ -1,5 +1,5 @@
 <script setup lang="ts">
-export type LoadingOverlaySize = 'sm' | 'md' | 'lg' | 'xl'
+import type { Size } from '../../types'
 
 export interface LoadingOverlayProps {
   /**
@@ -8,7 +8,7 @@ export interface LoadingOverlayProps {
    * - xl is intended for larger containers (Card, Modal, full sections).
    * Defaults to 'md'.
    */
-  size?: LoadingOverlaySize
+  size?: Size
   /**
    * Accessible label for the overlay.
    * Provide this when the parent element does NOT already handle accessibility
@@ -43,7 +43,6 @@ withDefaults(defineProps<LoadingOverlayProps>(), {
         r="10"
         stroke="currentColor"
         stroke-width="2.5"
-        stroke-opacity="0.25"
       />
       <path
         d="M12 2a10 10 0 0 1 10 10"
@@ -72,7 +71,16 @@ withDefaults(defineProps<LoadingOverlayProps>(), {
   flex-shrink: 0;
 }
 
+.lucas-ui-loading-overlay__spinner circle {
+  stroke-opacity: var(--lucas-ui-opacity-spinner-track);
+}
+
 /* Size modifiers */
+.lucas-ui-loading-overlay--xs .lucas-ui-loading-overlay__spinner {
+  width: var(--lucas-ui-icon-size-xs, 0.75rem);
+  height: var(--lucas-ui-icon-size-xs, 0.75rem);
+}
+
 .lucas-ui-loading-overlay--sm  .lucas-ui-loading-overlay__spinner {
   width: var(--lucas-ui-icon-size-sm, 1rem);
   height: var(--lucas-ui-icon-size-sm, 1rem);

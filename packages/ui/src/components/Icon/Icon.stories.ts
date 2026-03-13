@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { Icon } from '.'
+import type { IconProps } from '.'
 import { IconHome, IconSave, IconTrash } from '../../icons'
 
 const meta: Meta<typeof Icon> = {
@@ -13,7 +14,7 @@ const meta: Meta<typeof Icon> = {
     },
     size: {
       control: 'select',
-      options: ['sm', 'md', 'lg'],
+      options: ['xs', 'sm', 'md', 'lg', 'xl'],
     },
     label: {
       control: 'text',
@@ -26,7 +27,7 @@ type Story = StoryObj<typeof Icon>
 
 export const ByName: Story = {
   args: { name: 'home', size: 'md' },
-  render: (args) => ({
+  render: (args: IconProps) => ({
     components: { Icon },
     setup() { return { args } },
     template: `<Icon v-bind="args" />`,

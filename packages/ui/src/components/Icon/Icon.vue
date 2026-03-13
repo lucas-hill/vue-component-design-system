@@ -5,15 +5,15 @@ import IconHome from '../../icons/IconHome.vue'
 import IconSave from '../../icons/IconSave.vue'
 import IconTrash from '../../icons/IconTrash.vue'
 import type { IconName } from '../../icons'
+import type { Size } from '../../types'
 
 export type { IconName }
-export type IconSize = 'sm' | 'md' | 'lg'
 
 export interface IconProps {
   /** Render a registered built-in icon by name. */
   name?: IconName
   /** Controls the font-size inherited by the icon SVG. Defaults to inheriting from the parent. */
-  size?: IconSize
+  size?: Size
   /**
    * Accessible label for the icon. When provided, the wrapper gets role="img"
    * and aria-label. Omit when the icon is purely decorative (parent provides context).
@@ -56,6 +56,10 @@ const resolvedComponent = computed(() =>
 }
 
 /* Size modifiers set font-size so the child SVG (width/height: 1em) scales correctly. */
+.lucas-ui-icon-wrapper--xs {
+  font-size: var(--lucas-ui-icon-size-xs, 0.75rem);
+}
+
 .lucas-ui-icon-wrapper--sm {
   font-size: var(--lucas-ui-icon-size-sm, 1rem);
 }
@@ -66,5 +70,9 @@ const resolvedComponent = computed(() =>
 
 .lucas-ui-icon-wrapper--lg {
   font-size: var(--lucas-ui-icon-size-lg, 1.5rem);
+}
+
+.lucas-ui-icon-wrapper--xl {
+  font-size: var(--lucas-ui-icon-size-xl, 2rem);
 }
 </style>

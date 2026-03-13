@@ -1,0 +1,178 @@
+[data-theme="forest-dark"] {
+    /* Brand — Moonlit Emerald */
+    --lucas-ui-color-brand-primary: #4ade96;
+    --lucas-ui-color-brand-primary-hover: #6ae8a9;
+    --lucas-ui-color-brand-primary-active: #88f0bc;
+    --lucas-ui-color-brand-on-primary: #0c3820;
+
+    /* Danger — Ember Glow */
+    --lucas-ui-color-danger: #e05c5c;
+    --lucas-ui-color-danger-hover: #e87777;
+    --lucas-ui-color-danger-active: #f09090;
+    --lucas-ui-color-danger-on: #ffffff;
+
+    /* Success — Luminous Glow */
+    --lucas-ui-color-success: #6ae8a9;
+    --lucas-ui-color-success-hover: #88f0bc;
+    --lucas-ui-color-success-active: #a6f5cc;
+    --lucas-ui-color-success-on: #0c3820;
+
+    /* Warning — Alchemical Gold */
+    --lucas-ui-color-warning: #f0c040;
+    --lucas-ui-color-warning-hover: #f5d060;
+    --lucas-ui-color-warning-active: #fae080;
+    --lucas-ui-color-warning-on: #1a0e00;
+
+    /* Neutral — Starlit Sage */
+    --lucas-ui-color-neutral: #8a9e8a;
+    --lucas-ui-color-neutral-hover: #a4b8a4;
+    --lucas-ui-color-neutral-active: #bed2be;
+    --lucas-ui-color-neutral-on: #1a2e1a;
+
+    /* Surface */
+    --lucas-ui-color-bg: #0a1a10;
+    --lucas-ui-color-text: #e8f5ef;
+
+    /* Overlay */
+    --lucas-ui-color-overlay-bg: rgba(10, 40, 24, 0.45);
+
+    /* Text */
+    --lucas-ui-color-text-disabled: #5c6b5a;
+
+    /* Border */
+    --lucas-ui-color-border-default: #2e5040;
+
+    /* Button */
+    --lucas-ui-button-padding-y-sm: 6px;
+    --lucas-ui-button-padding-y-lg: 10px;
+
+    /* Border width */
+    --lucas-ui-border-width: 1px;
+
+    /* Opacity */
+    --lucas-ui-opacity-disabled: 0.6;
+    --lucas-ui-opacity-loading-content: 0.35;
+    --lucas-ui-opacity-spinner-track: 0.25;
+
+    /* Icon sizes */
+    --lucas-ui-icon-size-xs: 0.75rem;
+    --lucas-ui-icon-size-sm: 1rem;
+    --lucas-ui-icon-size-md: 1.25rem;
+    --lucas-ui-icon-size-lg: 1.5rem;
+    --lucas-ui-icon-size-xl: 2rem;
+    --lucas-ui-loading-overlay-size-xl: 2.5rem;
+
+    /* Spacing */
+    --lucas-ui-space-1: 4px;
+    --lucas-ui-space-2: 8px;
+    --lucas-ui-space-3: 12px;
+    --lucas-ui-space-4: 16px;
+    --lucas-ui-space-5: 20px;
+    --lucas-ui-space-6: 24px;
+
+    /* Font sizes */
+    --lucas-ui-font-size-xs: 0.75rem;
+    --lucas-ui-font-size-sm: 0.875rem;
+    --lucas-ui-font-size-md: 1rem;
+    --lucas-ui-font-size-lg: 1.125rem;
+
+    /* Radius — more organic than default */
+    --lucas-ui-radius-md: 10px;
+    --lucas-ui-radius-pill: 9999px;
+
+    /* Motion — deliberate, enchanted */
+    --lucas-ui-motion-duration-fast: 200ms;
+    --lucas-ui-motion-easing-standard: ease-in-out;
+
+    /* Field chrome */
+    --lucas-ui-field-label-color: #c8e0d0;
+    --lucas-ui-field-label-font-weight: 500;
+    --lucas-ui-field-label-gap: 6px;
+    --lucas-ui-field-description-color: #8a9e8a;
+    --lucas-ui-field-error-color: #e05c5c;
+
+    /* Input */
+    --lucas-ui-input-bg: #142820;
+    --lucas-ui-input-color: #e8f5ef;
+    --lucas-ui-input-border-color: #2e5040;
+    --lucas-ui-input-border-color-hover: #4a7060;
+    --lucas-ui-input-border-color-focus: #4ade96;
+    --lucas-ui-input-border-color-error: #e05c5c;
+    --lucas-ui-input-placeholder-color: #5c6b5a;
+    --lucas-ui-input-focus-ring-color: rgba(74, 222, 150, 0.25);
+    --lucas-ui-input-focus-ring-width: 3px;
+    --lucas-ui-input-focus-ring-color-error: rgba(224, 92, 92, 0.25);
+    --lucas-ui-select-chevron-color: #8a9e8a;
+
+    /* Toast */
+    --lucas-ui-toast-bg: #142820;
+    --lucas-ui-toast-color: #e8f5ef;
+    --lucas-ui-toast-title-font-weight: 600;
+    --lucas-ui-toast-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --lucas-ui-toast-accent-width: 4px;
+    --lucas-ui-toast-max-width: 400px;
+    --lucas-ui-toast-z-index: 9999;
+    --lucas-ui-toast-close-color: #8a9e8a;
+    --lucas-ui-toast-close-color-hover: #c8e0d0;
+
+    /* MultiSelect */
+    --lucas-ui-multi-select-tag-bg: #2e5040;
+    --lucas-ui-multi-select-tag-color: #e8f5ef;
+    --lucas-ui-multi-select-tag-radius: 4px;
+    --lucas-ui-multi-select-tag-gap: 4px;
+    --lucas-ui-multi-select-dropdown-bg: #142820;
+    --lucas-ui-multi-select-dropdown-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --lucas-ui-multi-select-dropdown-max-height: 240px;
+    --lucas-ui-multi-select-dropdown-z-index: 100;
+    --lucas-ui-multi-select-option-bg-hover: #1a3428;
+    --lucas-ui-multi-select-option-bg-selected: #1a4030;
+    --lucas-ui-multi-select-checkbox-color: #4ade96;
+    --lucas-ui-multi-select-checkbox-border-color: #4a7060;
+
+    /* Search */
+    --lucas-ui-search-dropdown-bg: #142820;
+    --lucas-ui-search-dropdown-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --lucas-ui-search-dropdown-max-height: 240px;
+    --lucas-ui-search-dropdown-z-index: 100;
+    --lucas-ui-search-option-bg-hover: #1a3428;
+    --lucas-ui-search-option-bg-active: #2e5040;
+    --lucas-ui-search-empty-color: #8a9e8a;
+    --lucas-ui-search-highlight-color: #4ade96;
+    --lucas-ui-search-highlight-font-weight: 600;
+
+    /* Tree */
+    --lucas-ui-tree-item-bg-hover: #1a3428;
+    --lucas-ui-tree-item-bg-active: #2e5040;
+    --lucas-ui-tree-item-bg-selected: #1a4030;
+    --lucas-ui-tree-item-color: #e8f5ef;
+    --lucas-ui-tree-item-padding-y: 4px;
+    --lucas-ui-tree-item-padding-x: 8px;
+    --lucas-ui-tree-item-border-radius: 6px;
+    --lucas-ui-tree-toggle-color: #8a9e8a;
+    --lucas-ui-tree-toggle-size: 16px;
+    --lucas-ui-tree-line-color: #2e5040;
+    --lucas-ui-tree-line-width: 1px;
+    --lucas-ui-tree-indent-size: 20px;
+    --lucas-ui-tree-empty-color: #8a9e8a;
+
+    /* Tag */
+    --lucas-ui-tag-close-opacity: 0.5;
+    --lucas-ui-tag-close-opacity-hover: 0.9;
+
+    /* DataTable */
+    --lucas-ui-data-table-border-color: #2e5040;
+    --lucas-ui-data-table-header-bg: #142820;
+    --lucas-ui-data-table-header-color: #c8e0d0;
+    --lucas-ui-data-table-header-font-weight: 600;
+    --lucas-ui-data-table-row-bg: #0a1a10;
+    --lucas-ui-data-table-row-bg-striped: #142820;
+    --lucas-ui-data-table-row-bg-hover: #1a3428;
+    --lucas-ui-data-table-cell-padding-y: 12px;
+    --lucas-ui-data-table-cell-padding-x: 16px;
+    --lucas-ui-data-table-card-gap: 12px;
+    --lucas-ui-data-table-card-border-radius: 10px;
+    --lucas-ui-data-table-card-padding: 16px;
+    --lucas-ui-data-table-card-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --lucas-ui-data-table-empty-color: #8a9e8a;
+    --lucas-ui-data-table-pagination-gap: 4px;
+}

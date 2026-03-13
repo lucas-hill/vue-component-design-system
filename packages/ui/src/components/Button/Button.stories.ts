@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import { Button } from '.'
+import type { ButtonProps } from '.'
 import { IconTrash } from '../../icons'
 
 const meta: Meta<typeof Button> = {
@@ -15,6 +16,7 @@ const meta: Meta<typeof Button> = {
       control: 'select',
       options: ['primary', 'danger', 'success', 'warning', 'neutral'],
     },
+    pill: { control: 'boolean' },
     disabled: { control: 'boolean' },
     loading: { control: 'boolean' },
     icon: {
@@ -39,7 +41,7 @@ type Story = StoryObj<typeof Button>
 
 export const Solid: Story = {
   args: { variant: 'solid', color: 'primary' },
-  render: (args) => ({
+  render: (args: ButtonProps) => ({
     components: { Button },
     setup() { return { args } },
     template: `<Button v-bind="args">Click me</Button>`,
@@ -48,7 +50,7 @@ export const Solid: Story = {
 
 export const Outline: Story = {
   args: { variant: 'outline', color: 'primary' },
-  render: (args) => ({
+  render: (args: ButtonProps) => ({
     components: { Button },
     setup() { return { args } },
     template: `<Button v-bind="args">Click me</Button>`,
@@ -57,10 +59,38 @@ export const Outline: Story = {
 
 export const Ghost: Story = {
   args: { variant: 'ghost', color: 'primary' },
-  render: (args) => ({
+  render: (args: ButtonProps) => ({
     components: { Button },
     setup() { return { args } },
     template: `<Button v-bind="args">Click me</Button>`,
+  }),
+}
+
+// ── Pill shape ────────────────────────────────────────────────────────────────
+
+export const Pill: Story = {
+  render: () => ({
+    components: { Button },
+    template: `
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <Button pill variant="solid" color="primary">Solid</Button>
+          <Button pill variant="outline" color="primary">Outline</Button>
+          <Button pill variant="ghost" color="primary">Ghost</Button>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <Button pill size="xs">Extra Small</Button>
+          <Button pill size="sm">Small</Button>
+          <Button pill size="md">Medium</Button>
+          <Button pill size="lg">Large</Button>
+          <Button pill size="xl">Extra Large</Button>
+        </div>
+        <div style="display: flex; gap: 10px; align-items: center;">
+          <Button pill icon="save" icon-position="left">Save</Button>
+          <Button pill icon="trash" color="danger" aria-label="Delete" />
+        </div>
+      </div>
+    `,
   }),
 }
 
@@ -116,7 +146,7 @@ export const Disabled: Story = {
 
 export const Loading: Story = {
   args: { variant: 'solid', color: 'primary', loading: true },
-  render: (args) => ({
+  render: (args: ButtonProps) => ({
     components: { Button },
     setup() { return { args } },
     template: `<Button v-bind="args">Save changes</Button>`,
@@ -180,7 +210,7 @@ export const IconOnly: Story = {
 
 export const IconLeft: Story = {
   args: { variant: 'solid', color: 'primary', icon: 'save', iconPosition: 'left' },
-  render: (args) => ({
+  render: (args: ButtonProps) => ({
     components: { Button },
     setup() { return { args } },
     template: `<Button v-bind="args">Save</Button>`,

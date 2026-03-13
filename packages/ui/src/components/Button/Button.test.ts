@@ -245,6 +245,26 @@ describe('Button', () => {
     expect(sizeClasses[0]).toBe('lucas-ui-button--size-lg')
   })
 
+  // ── Pill shape ────────────────────────────────────────────────────────────
+
+  it('does not apply pill class by default', () => {
+    render(Button, { slots: { default: 'Click me' } })
+    expect(screen.getByRole('button').classList.contains('lucas-ui-button--pill')).toBe(false)
+  })
+
+  it('applies pill class when pill is true', () => {
+    render(Button, { props: { pill: true }, slots: { default: 'Click me' } })
+    expect(screen.getByRole('button').classList.contains('lucas-ui-button--pill')).toBe(true)
+  })
+
+  it('pill works with all variants', () => {
+    (['solid', 'outline', 'ghost'] as const).forEach((variant) => {
+      const { unmount } = render(Button, { props: { pill: true, variant }, slots: { default: 'Click me' } })
+      expect(screen.getByRole('button').classList.contains('lucas-ui-button--pill')).toBe(true)
+      unmount()
+    })
+  })
+
   // ── No icon class when no icon ────────────────────────────────────────────
 
   it('does not apply icon classes when no icon is provided', () => {

@@ -2,19 +2,20 @@
 import { computed, useAttrs, useSlots, onMounted } from 'vue'
 import Icon from '../Icon/Icon.vue'
 import LoadingOverlay from '../LoadingOverlay/LoadingOverlay.vue'
-import type { LoadingOverlaySize } from '../LoadingOverlay/LoadingOverlay.vue'
+import type { Size } from '../../types'
 import type { IconName } from '../../icons'
 
 export type ButtonVariant = 'solid' | 'outline' | 'ghost'
 export type ButtonColor = 'primary' | 'danger' | 'success' | 'warning' | 'neutral'
 export type ButtonIconPosition = 'left' | 'right' | 'top' | 'bottom' | 'only'
-export type ButtonSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
 export interface ButtonProps {
   variant?: ButtonVariant
   color?: ButtonColor
   /** Visual size of the button. Defaults to 'md'. */
-  size?: ButtonSize
+  size?: Size
+  /** Renders the button with fully rounded (pill) corners. */
+  pill?: boolean
   disabled?: boolean
   /**
    * Show a loading spinner overlaid on the button content.
@@ -37,6 +38,7 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   variant: 'solid',
   color: 'primary',
   size: 'md',
+  pill: false,
   disabled: false,
   loading: false,
   iconPosition: 'only',
@@ -60,7 +62,7 @@ const showIconAfter = computed(() =>
   (props.iconPosition === 'right' || props.iconPosition === 'bottom'),
 )
 
-const overlaySize = computed<LoadingOverlaySize>(() => {
+const overlaySize = computed<Size>(() => {
   if (props.size === 'lg' || props.size === 'xl') return 'lg'
   if (props.size === 'xs' || props.size === 'sm') return 'sm'
   return 'md'
@@ -72,6 +74,7 @@ const classes = computed(() => [
   `lucas-ui-button--color-${props.color}`,
   `lucas-ui-button--size-${props.size}`,
   hasIcon.value && `lucas-ui-button--icon-${props.iconPosition}`,
+  { 'lucas-ui-button--pill': props.pill },
   // Suppress is-disabled when loading so its opacity doesn't conflict with the overlay
   { 'is-disabled': props.disabled && !props.loading },
   { 'is-loading': props.loading },
@@ -150,6 +153,12 @@ if (import.meta.env.DEV) {
     transform var(--lucas-ui-motion-duration-fast) var(--lucas-ui-motion-easing-standard);
 }
 
+/* ── Pill shape ──────────────────────────────────────────────────────────── */
+
+.lucas-ui-button--pill {
+  border-radius: var(--lucas-ui-radius-pill);
+}
+
 /* ── Size modifiers ──────────────────────────────────────────────────────── */
 
 .lucas-ui-button--size-xs {
@@ -160,7 +169,7 @@ if (import.meta.env.DEV) {
 }
 
 .lucas-ui-button--size-sm {
-  --_btn-padding-y: 6px;
+  --_btn-padding-y: var(--lucas-ui-button-padding-y-sm);
   --_btn-padding-x: var(--lucas-ui-space-3);
   --_btn-font-size: var(--lucas-ui-font-size-sm);
   --_btn-icon-gap: var(--lucas-ui-space-1);
@@ -174,7 +183,7 @@ if (import.meta.env.DEV) {
 }
 
 .lucas-ui-button--size-lg {
-  --_btn-padding-y: 10px;
+  --_btn-padding-y: var(--lucas-ui-button-padding-y-lg);
   --_btn-padding-x: var(--lucas-ui-space-5);
   --_btn-font-size: var(--lucas-ui-font-size-md);
   --_btn-icon-gap: var(--lucas-ui-space-2);
@@ -241,7 +250,7 @@ if (import.meta.env.DEV) {
 
 .lucas-ui-button--outline {
   background: transparent;
-  border: 1px solid var(--_btn-color);
+  border: var(--lucas-ui-border-width) solid var(--_btn-color);
   color: var(--_btn-color);
 }
 
@@ -269,7 +278,7 @@ if (import.meta.env.DEV) {
 /* ── States ──────────────────────────────────────────────────────────────── */
 
 .lucas-ui-button.is-disabled {
-  opacity: 0.6;
+  opacity: var(--lucas-ui-opacity-disabled);
   cursor: not-allowed;
 }
 
@@ -281,7 +290,7 @@ if (import.meta.env.DEV) {
 
 /* Fade all direct children except the LoadingOverlay */
 .lucas-ui-button.is-loading > *:not(.lucas-ui-loading-overlay) {
-  opacity: 0.35;
+  opacity: var(--lucas-ui-opacity-loading-content);
 }
 
 /* ── Icon layout ─────────────────────────────────────────────────────────── */

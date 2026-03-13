@@ -93,12 +93,12 @@ withDefaults(defineProps<ButtonGroupProps>(), {
  */
 .lucas-ui-button-group:not(.lucas-ui-button-group--vertical) > .lucas-ui-button:not(:first-child),
 .lucas-ui-button-group:not(.lucas-ui-button-group--vertical) > .lucas-ui-group-item:not(:first-child) {
-  margin-left: -1px;
+  margin-left: calc(-1 * var(--lucas-ui-border-width));
 }
 
 .lucas-ui-button-group--vertical > .lucas-ui-button:not(:first-child),
 .lucas-ui-button-group--vertical > .lucas-ui-group-item:not(:first-child) {
-  margin-top: -1px;
+  margin-top: calc(-1 * var(--lucas-ui-border-width));
 }
 
 /* ── Focus / hover z-index ───────────────────────────────────────────────── */

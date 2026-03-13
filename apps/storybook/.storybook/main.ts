@@ -19,6 +19,8 @@ const config: StorybookConfig = {
         config.resolve.alias = {
             ...config.resolve.alias,
             '@vue-design-system/ui': resolve(uiSrc, 'index.ts'),
+            '@vue-design-system/theme-forest': resolve(process.cwd(), '../../packages/theme-forest'),
+            '@vue-design-system/theme-forest-dark': resolve(process.cwd(), '../../packages/theme-forest-dark'),
         }
         return config
     },

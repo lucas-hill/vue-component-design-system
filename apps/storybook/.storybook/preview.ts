@@ -2,6 +2,8 @@ import type { Preview } from '@storybook/vue3'
 import { computed } from 'vue'
 import '@vue-design-system/theme-default/tokens.css'
 import '@vue-design-system/theme-dark/tokens.css'
+import '@vue-design-system/theme-forest/tokens.css'
+import '@vue-design-system/theme-forest-dark/tokens.css'
 
 const preview: Preview = {
     globalTypes: {
@@ -13,6 +15,8 @@ const preview: Preview = {
                 items: [
                     { value: 'default', title: 'Default' },
                     { value: 'dark', title: 'Dark' },
+                    { value: 'forest', title: 'Forest' },
+                    { value: 'forest-dark', title: 'Forest Dark' },
                 ],
                 dynamicTitle: true,
             },
@@ -26,7 +30,7 @@ const preview: Preview = {
                 return { theme }
             },
             template: `
-                <div :data-theme="theme" style="padding: 1.5rem; min-height: 100vh;">
+                <div :data-theme="theme" style="padding: 1.5rem; min-height: 100vh; background-color: var(--lucas-ui-color-bg); color: var(--lucas-ui-color-text);">
                     <story />
                 </div>
             `,
